@@ -11,7 +11,7 @@ app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 app.use("/word",wordRouter)
-app.use("/user",userRouter)
+app.use("/user",userRouter) 
 
 app.get('/',(req,res)=>{
   res.send("HOME")

@@ -5,11 +5,10 @@ const userRouter = Router();
 
 userRouter.post("/", async (req, res) => {
   const { userData } = req.body;
-
+ 
   try {
     const newUser = UserModel({ ...userData });
     await newUser.save();
-
     console.log(newUser);
     res.send("Details set Successfully");
   } catch (err) {
